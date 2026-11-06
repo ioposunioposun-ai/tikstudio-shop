@@ -143,6 +143,26 @@ label.l{display:block;font-size:14px;color:var(--mu);margin:14px 0 6px}
   .nl{display:none}
 }
 @media (max-width:520px){.live span{display:none}.live{padding:8px}.float{display:none}.brand small{display:none}.feat{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.code span{width:40px;height:54px;font-size:28px}.price b{font-size:46px}}
+
+/* ✨ 2026 refresh: purple King Studio logo stage · stats · Minecraft maps */
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(168,85,247,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(168,85,247,.07) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse at 50% 0%,#000 0%,transparent 70%);mask-image:radial-gradient(ellipse at 50% 0%,#000 0%,transparent 70%)}
+.stage{position:relative;padding-top:40px}
+.stage .ring{position:absolute;right:-30px;top:-70px;width:300px;height:300px;border-radius:50%;background:conic-gradient(from 0deg,#a855f7,#ec4899,#22d3ee,#a855f7);filter:blur(42px);opacity:.55;animation:ringSpin 9s linear infinite;z-index:0}
+.stage .klogo{position:absolute;right:-24px;top:-82px;width:290px;z-index:3;filter:drop-shadow(0 0 28px rgba(168,85,247,.85)) drop-shadow(0 10px 30px rgba(0,0,0,.6));animation:floatY 5s ease-in-out infinite}
+.stage .shot-hero,.stage .shot{position:relative;z-index:2}
+@keyframes ringSpin{to{transform:rotate(360deg)}}
+@keyframes floatY{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-14px) rotate(2deg)}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:6px 0 10px}
+.stats div{background:linear-gradient(135deg,rgba(168,85,247,.16),rgba(236,72,153,.08));border:1px solid rgba(168,85,247,.32);border-radius:20px;padding:18px 16px;text-align:center}
+.stats b{display:block;font-family:Kanit;font-size:34px;line-height:1.1;background:linear-gradient(90deg,#c084fc,#f472b6,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stats span{color:#a9a3c4;font-size:14px}
+.maps{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.map{position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.1);background:#0d0b16;transition:transform .2s,box-shadow .2s}
+.map:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 16px 40px rgba(168,85,247,.35)}
+.map img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.map b{position:absolute;left:10px;bottom:10px;padding:5px 12px;border-radius:999px;background:rgba(7,6,13,.82);backdrop-filter:blur(6px);font-family:Kanit;font-size:15px}
+.map i{position:absolute;right:10px;top:10px;font-style:normal;font-size:12px;padding:3px 9px;border-radius:999px;background:linear-gradient(135deg,#a855f7,#ec4899);color:#fff}
+@media (max-width:900px){.stats{grid-template-columns:1fr 1fr}.stage .klogo{width:180px;right:-6px;top:-50px}.stage .ring{width:200px;height:200px;right:0;top:-40px}}
 </style>
 </head>
 <body>
@@ -164,7 +184,7 @@ label.l{display:block;font-size:14px;color:var(--mu);margin:14px 0 6px}
     <div class="cta"><button class="btn pri lg buy">🛒 ซื้อ Tikstudio</button><a class="btn lg" href="#gallery">👀 ดูตัวอย่าง</a></div>
     <div class="chk"><span>🧧 จ่ายด้วยอั่งเปา TrueMoney</span><span>📷 หรือสแกน QR</span><span>💬 ตรวจเงินแล้วเข้า Discord ได้เลย</span></div>
   </div>
-  <div class="heroimg">
+  <div class="heroimg stage"><div class="ring"></div><img class="klogo" src="img/logo-big.png" alt="King Studio">
     <div class="shot"><img src="img/home.jpg" alt="หน้าโปรแกรม Tikstudio"></div>
     <img class="float f1" src="img/act-dragon.jpg" alt="">
     <img class="float f2" src="img/act-rocket.jpg" alt="">
@@ -173,6 +193,7 @@ label.l{display:block;font-size:14px;color:var(--mu);margin:14px 0 6px}
 
 <div class="wrap mine" id="mine"><h3 style="margin:0 0 10px">💬 การซื้อของฉัน</h3><div id="mineList"></div></div>
 
+<div class="wrap"><div class="stats"><div><b>14+</b><span>แมพมายคราฟ</span></div><div><b>200+</b><span>ของขวัญ TikTok พร้อมรูป</span></div><div><b>30+</b><span>โอเวอร์เลย์ใส่ TikTok LIVE Studio</span></div><div><b>1 คลิก</b><span>อัปเดตในโปรแกรม</span></div></div></div>
 <section id="features"><div class="wrap">
   <h2>ทำอะไรได้บ้าง</h2>
   <p class="sub">รวมทุกอย่างที่สตรีมเมอร์ต้องใช้ไว้ในโปรแกรมเดียว ใส่ลิงก์โอเวอร์เลย์ใน TikTok LIVE Studio ได้เลย</p>
@@ -182,11 +203,13 @@ label.l{display:block;font-size:14px;color:var(--mu);margin:14px 0 6px}
     <div class="f"><div class="ic">⏱️</div><h3>จับเวลา</h3><p>นับถอยหลังบนจอ ของขวัญบวกหรือลบเวลาได้</p></div>
     <div class="f"><div class="ic">🔊</div><h3>เสียง & โอเวอร์เลย์พิเศษ</h3><p>เล่นเสียง ขึ้นภาพ ขึ้นข้อความตามที่คนดูส่งมา</p></div>
     <div class="f"><div class="ic">💸</div><h3>เว็บโดเนทของตัวเอง</h3><p>รับโดเนทผ่านอั่งเปา พร้อมเพย์ หรือธนาคาร มีบอทตรวจสลิปฟรี แจ้งเตือนขึ้นจอทันที</p></div>
-    <div class="f"><div class="ic">⛏️</div><h3>มายคราฟ 10 แมพ</h3><p>ต่อบล็อก ต่อตึก ตัดต้นไม้ ปลูกผัก หาเพชร ฯลฯ คนดูช่วยหรือป่วนผ่านของขวัญ</p></div>
+    <div class="f"><div class="ic">⛏️</div><h3>มายคราฟ 14+ แมพ</h3><p>ต่อบล็อก ต่อตึก ตัดต้นไม้ ปลูกผัก หาเพชร ฯลฯ คนดูช่วยหรือป่วนผ่านของขวัญ</p></div>
     <div class="f"><div class="ic">🎮</div><h3>มินิเกม</h3><p>เกมเล่นบนไลฟ์ มีหลอดความคืบหน้าและวินในตัว</p></div>
     <div class="f"><div class="ic">✂️</div><h3>ตัดต่อรูป</h3><p>ทำรูปปก รูปของขวัญ และป้ายต่างๆ ได้ในโปรแกรม</p></div>
   </div>
 </div></section>
+
+<section id="maps"><div class="wrap"><h2>แมพมายคราฟให้คนดูเล่นด้วยของขวัญ</h2><p class="sub">เลือกแมพ กดรันเซิร์ฟในโปรแกรม แล้วให้ของขวัญ ใจ คอมเมนต์ ไปสั่งในเกมได้ทันที — มีพรีเซ็ตพร้อมใช้ทุกแมพ</p><div class="maps"><div class="map"><img loading="lazy" src="img/maps/tikbuild.jpg" alt="ต่อบล็อก"><b>⛏️ ต่อบล็อก</b></div><div class="map"><img loading="lazy" src="img/maps/diamond.jpg" alt="หาเพชร"><b>⛏️ หาเพชร</b></div><div class="map"><img loading="lazy" src="img/maps/sand.jpg" alt="ขุดทราย"><b>⛏️ ขุดทราย</b></div><div class="map"><img loading="lazy" src="img/maps/pig.jpg" alt="จับหมู"><b>⛏️ จับหมู</b></div><div class="map"><img loading="lazy" src="img/maps/farm.jpg" alt="ปลูกผัก"><b>⛏️ ปลูกผัก</b></div><div class="map"><img loading="lazy" src="img/maps/buildmob.jpg" alt="ต่อตีม็อบ"><b>⛏️ ต่อตีม็อบ</b></div><div class="map"><img loading="lazy" src="img/maps/rail.jpg" alt="รถราง"><b>⛏️ รถราง</b><i>ใหม่</i></div><div class="map"><img loading="lazy" src="img/maps/paint.jpg" alt="ปาสี"><b>⛏️ ปาสี</b><i>ใหม่</i></div><div class="map"><img loading="lazy" src="img/maps/tower.jpg" alt="ต่อตึก"><b>⛏️ ต่อตึก</b></div><div class="map"><img loading="lazy" src="img/maps/carrun.jpg" alt="หนีรถ"><b>⛏️ หนีรถ</b></div><div class="map"><img loading="lazy" src="img/maps/jump.jpg" alt="กระโดด"><b>⛏️ กระโดด</b></div><div class="map"><img loading="lazy" src="img/maps/parkour.jpg" alt="ปากัว"><b>⛏️ ปากัว</b></div><div class="map"><img loading="lazy" src="img/maps/tree.jpg" alt="ตัดต้นไม้"><b>⛏️ ตัดต้นไม้</b></div><div class="map"><img loading="lazy" src="img/maps/survival.jpg" alt="หาเพชรเอาชีวิตรอด"><b>⛏️ หาเพชรเอาชีวิตรอด</b></div></div></div></section>
 
 <section id="gallery"><div class="wrap">
   <h2>ตัวอย่างในโปรแกรม</h2>
@@ -252,6 +275,7 @@ label.l{display:block;font-size:14px;color:var(--mu);margin:14px 0 6px}
     ['actions-add', '➕ สร้างอีเว้นท์แอคชั่น', 'กด “สร้างอีเว้นท์แอคชั่น” → เลือกเหตุการณ์ในไลฟ์ → เลือกสิ่งที่จะให้เกิด (เล่นเสียง รูป คลิป กดคีย์ คำสั่งมายคราฟ ฯลฯ)'],
     ['sounds', '🔊 เสียง', 'ตั้งเสียงตามของขวัญ ฟอลโลว์ กดใจ หรือคอมเมนต์ ใส่ได้หลายไฟล์และสุ่มเสียงได้'],
     ['sounds-add', '🎵 เพิ่มเสียง', 'เลือกเหตุการณ์ → ใส่ไฟล์เสียง MP3/WAV/OGG → ปรับความดัง จบ'],
+    ['presets', '🗂️ พรีเซ็ตทุกแมพ', 'กด “ใช้เลย” ได้แอคชั่นของเกมนั้นครบทันที — มีรูปปกและลิงก์แมพให้'],
     ['win', '🏆 นับวิน', 'ตัวนับวินบนจอ ปรับสี ฟอนต์ ขนาดได้ทุกอย่าง'],
     ['spin', '🎰 สุ่มวิน', 'วงล้อสุ่มบวกลบวินจากของขวัญ'],
     ['timer', '⏱️ จับเวลา', 'นับถอยหลัง/นับขึ้น ของขวัญบวกลบเวลาได้'],
